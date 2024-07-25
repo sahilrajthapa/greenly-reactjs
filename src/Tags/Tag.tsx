@@ -1,8 +1,11 @@
-import { useState } from "react";
 import { TagType } from "./TagType";
+import { useTagContext } from "./TagContext";
 
 export const Tag = ({ tag }: { tag: TagType }) => {
-  const [selectedTag, setSelectedTag] = useState("");
+  const { addTag } = useTagContext();
+
+  const handleAddTag = () => addTag(tag);
+
   return (
     <div
       style={{
@@ -12,8 +15,9 @@ export const Tag = ({ tag }: { tag: TagType }) => {
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
-        backgroundColor: `${tag.color}`
+        backgroundColor: `${tag.color}`,
       }}
+      onClick={handleAddTag}
     >
       {tag.name.fr}
     </div>

@@ -4,6 +4,7 @@ import { allRecipes } from "./Recipes/RecipeData";
 import { TagList } from "./Tagfilter/ListeDesTags";
 import { tagList } from "./Tags/TagData";
 import { useTagContext } from "./Tags/TagContext";
+import { SelectedTags } from "./Tags/SelectedTags";
 
 export default function App() {
   const { selectedTags, removeTag } = useTagContext();
@@ -19,24 +20,7 @@ export default function App() {
     <div className="App">
       Liste des recettes
       <TagList tags={tagList} />
-      <div>
-        {selectedTags.map((tag) => (
-          <span
-            key={tag.id}
-            style={{
-              backgroundColor: "#d0d0d0",
-              border: "1px solid #ccc",
-              borderRadius: "3px",
-              padding: "5px 10px",
-              marginRight: "5px",
-              cursor: "pointer",
-            }}
-            onClick={() => removeTag(tag)}
-          >
-            {tag.name.fr}
-          </span>
-        ))}
-      </div>
+      <SelectedTags tags={selectedTags} />
       <Recipes recipes={getFilteredRecipes()} />
     </div>
   );

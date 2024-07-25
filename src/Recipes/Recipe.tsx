@@ -12,6 +12,9 @@ const useStyles = createUseStyles({
     padding: "10px",
     boxShadow: "5px 5px 7px 2px rgba(0,0,0,0.76)",
     marginTop: "20px",
+    "@media (max-width: 767px)": {
+      flexDirection: "column",
+    },
   },
   recipeImg: {
     display: "flex",
@@ -20,11 +23,18 @@ const useStyles = createUseStyles({
     height: "200px",
     width: "70%",
     backgroundSize: "cover",
+    "@media (max-width: 767px)": {
+      width: "100%",
+      backgroundPosition: "center",
+    },
   },
   recipeContent: {
     padding: "10px",
     backgroundColor: "lightblue",
     width: "100%",
+    "@media (max-width: 767px)": {
+      padding: 0,
+    },
   },
   recipeDesc: {
     padding: "10px",

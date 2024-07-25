@@ -10,6 +10,9 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "row",
     justifyContent: "center",
+    "@media (max-width: 767px)": {
+      flexWrap: "wrap",
+    },
   },
 });
 

@@ -1,5 +1,5 @@
 import { createUseStyles } from "react-jss";
-import { ListOfRecipes } from "./RecipeType";
+import { RecipesProps } from "./RecipeType";
 import Recipe from "./Recipe";
 
 const useStyles = createUseStyles({
@@ -17,7 +17,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const Recipes = ({ recipes }: { recipes: ListOfRecipes }) => {
+export const Recipes = ({ recipes }: RecipesProps) => {
   const classes = useStyles();
   return (
     <div className={classes.recipesWrap}>

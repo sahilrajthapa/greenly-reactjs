@@ -5,3 +5,11 @@ export type StepType = {
   order: number;
   ingredients?: IngredientWithQuantityType[];
 };
+
+export interface StepProps {
+  etape: StepType;
+}
+
+export interface StepsProps {
+  steps: StepType[];
+}

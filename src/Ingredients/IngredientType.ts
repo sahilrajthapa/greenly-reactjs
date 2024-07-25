@@ -5,3 +5,12 @@ export type IngredientType = {
   unit?: string;
   prefix?: string;
 };
+
+export interface IngredientProps {
+  ingredient: IngredientType;
+  quantity?: number;
+}
+
+export interface IngredientsProps {
+  ingredients?: IngredientType[];
+}

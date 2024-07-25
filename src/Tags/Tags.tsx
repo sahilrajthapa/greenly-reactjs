@@ -1,6 +1,6 @@
 import { createUseStyles } from "react-jss";
 import { Tag } from "./Tag";
-import { TagType } from "./TagType";
+import { TagsProps } from "./TagType";
 
 const useStyles = createUseStyles({
   tags: {
@@ -13,7 +13,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const Tags = ({ tags }: { tags: TagType[] }) => {
+export const Tags = ({ tags }: TagsProps) => {
   const classes = useStyles();
   return (
     <div className={classes.tags}>

@@ -1,11 +1,7 @@
-import { IngredientType } from "./IngredientType";
+import { IngredientsProps } from "./IngredientType";
 import Ingredient from "./Ingredient";
 
-export const Ingredients = ({
-  ingredients
-}: {
-  ingredients?: IngredientType[];
-}) => {
+export const Ingredients = ({ ingredients }: IngredientsProps) => {
   return (
     <>
       {ingredients &&

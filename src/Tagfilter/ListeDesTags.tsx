@@ -1,6 +1,6 @@
 import { Tags } from "../Tags/Tags";
-import { TagType } from "../Tags/TagType";
+import { TagsProps } from "../Tags/TagType";
 
-export const TagList = ({ tags }: { tags: TagType[] }) => {
+export const TagList = ({ tags }: TagsProps) => {
   return <Tags tags={tags} />;
 };

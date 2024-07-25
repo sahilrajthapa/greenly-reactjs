@@ -5,3 +5,11 @@ export type IngredientWithQuantityType = {
   unit?: string;
   quantity: number;
 };
+
+export interface IngredientWithQuantityProps {
+  ingredientWithQuantity: IngredientWithQuantityType;
+}
+
+export interface IngredientsWithQuantityProps {
+  ingredientsWithQuantity: IngredientWithQuantityType[];
+}

@@ -1,11 +1,5 @@
 import React, { createContext, useState, ReactNode, useContext } from "react";
-import { TagType } from "./TagType";
-
-type TagContextType = {
-  selectedTags: TagType[];
-  addTag: (tag: TagType) => void;
-  removeTag: (tag: TagType) => void;
-};
+import { TagContextType, TagType } from "./TagType";
 
 const TagContext = createContext<TagContextType | null>(null);
 

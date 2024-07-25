@@ -1,12 +1,6 @@
-import { IngredientType } from "./IngredientType";
+import { IngredientProps } from "./IngredientType";
 
-export const Ingredient = ({
-  ingredient,
-  quantity,
-}: {
-  ingredient: IngredientType;
-  quantity?: number;
-}) => {
+export const Ingredient = ({ ingredient, quantity }: IngredientProps) => {
   return (
     <>
       {!ingredient.unit && quantity && quantity > 1 ? (

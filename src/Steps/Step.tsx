@@ -1,6 +1,6 @@
 import { createUseStyles } from "react-jss";
 import IngredientsWithQuantity from "../Ingredients/IngredientsWithQuantity";
-import { StepType } from "./StepType";
+import { StepProps } from "./StepType";
 
 const useStyles = createUseStyles({
   step: {
@@ -16,7 +16,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const Step = ({ etape }: { etape: StepType }) => {
+export const Step = ({ etape }: StepProps) => {
   const classes = useStyles();
   return (
     <div className={classes.step}>

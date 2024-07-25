@@ -1,6 +1,6 @@
 import { createUseStyles } from "react-jss";
 import Ingredient from "./Ingredient";
-import { IngredientWithQuantityType } from "./IngredientWithQuantityType";
+import { IngredientWithQuantityProps } from "./IngredientWithQuantityType";
 
 const useStyles = createUseStyles({
   wrap: {
@@ -10,9 +10,7 @@ const useStyles = createUseStyles({
 
 export const IngredientWithQuantity = ({
   ingredientWithQuantity,
-}: {
-  ingredientWithQuantity: IngredientWithQuantityType;
-}) => {
+}: IngredientWithQuantityProps) => {
   const classes = useStyles();
   return (
     <div className={classes.wrap}>

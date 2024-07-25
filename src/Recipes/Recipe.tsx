@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { createUseStyles } from "react-jss";
-import { RecipeType } from "./RecipeType";
+import { RecipeProps } from "./RecipeType";
 import Steps from "../Steps/Steps";
 import IngredientsWithQuantity from "../Ingredients/IngredientsWithQuantity";
 import { Tags } from "../Tags/Tags";
@@ -54,7 +54,7 @@ const useStyles = createUseStyles({
   },
 });
 
-export const Recipe = ({ recipe }: { recipe: RecipeType }) => {
+export const Recipe = ({ recipe }: RecipeProps) => {
   const classes = useStyles();
   const [showSteps, setShowSteps] = useState<Boolean>(false);
   const [showIngredients, setShowIngredients] = useState<boolean>(false);

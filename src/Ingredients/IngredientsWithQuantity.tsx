@@ -1,12 +1,9 @@
-import Ingredient from "./Ingredient";
-import { IngredientWithQuantityType } from "./IngredientWithQuantityType";
+import { IngredientsWithQuantityProps } from "./IngredientWithQuantityType";
 import { IngredientWithQuantity } from "./IngredientWithQuantity";
 
 export const IngredientsWithQuantity = ({
   ingredientsWithQuantity,
-}: {
-  ingredientsWithQuantity: IngredientWithQuantityType[];
-}) => {
+}: IngredientsWithQuantityProps) => {
   return (
     <>
       {ingredientsWithQuantity.map((obj, ind) => (

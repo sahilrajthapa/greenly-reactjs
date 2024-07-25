@@ -14,3 +14,11 @@ export type RecipeType = {
 };
 
 export type ListOfRecipes = RecipeType[];
+
+export interface RecipeProps {
+  recipe: RecipeType;
+}
+
+export interface RecipesProps {
+  recipes: ListOfRecipes;
+}

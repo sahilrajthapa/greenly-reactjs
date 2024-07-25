@@ -1,26 +1,29 @@
+import { createUseStyles } from "react-jss";
 import IngredientsWithQuantity from "../Ingredients/IngredientsWithQuantity";
 import { StepType } from "./StepType";
 
+const useStyles = createUseStyles({
+  step: {
+    backgroundColor: "thistle",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    textAlign: "left",
+    padding: "10px",
+  },
+  stepPad: {
+    padding: "10px",
+  },
+});
+
 export const Step = ({ etape }: { etape: StepType }) => {
+  const classes = useStyles();
   return (
-    <div
-      style={{
-        backgroundColor: "thistle",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        textAlign: "left",
-        padding: "10px",
-      }}
-    >
+    <div className={classes.step}>
       <div>
         {etape.order}. {etape.description}
       </div>
-      <div
-        style={{
-          padding: "10px",
-        }}
-      >
+      <div className={classes.stepPad}>
         {etape.ingredients && (
           <IngredientsWithQuantity
             ingredientsWithQuantity={etape.ingredients}

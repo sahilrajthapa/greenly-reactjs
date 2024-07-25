@@ -3,14 +3,14 @@ import { IngredientWithQuantityType } from "./IngredientWithQuantityType";
 import { IngredientWithQuantity } from "./IngredientWithQuantity";
 
 export const IngredientsWithQuantity = ({
-  ingredientsWithQuantity
+  ingredientsWithQuantity,
 }: {
   ingredientsWithQuantity: IngredientWithQuantityType[];
 }) => {
   return (
     <>
-      {ingredientsWithQuantity.map((obj) => (
-        <IngredientWithQuantity ingredientWithQuantity={obj} />
+      {ingredientsWithQuantity.map((obj, ind) => (
+        <IngredientWithQuantity key={ind} ingredientWithQuantity={obj} />
       ))}
     </>
   );

@@ -4,6 +4,7 @@ import {
   cream,
   egg,
   flour,
+  pear,
   redFruits,
   sugar,
 } from "../Ingredients/IngredientData";
@@ -100,6 +101,37 @@ export const stepsTarteAuxPoires: StepType[] = [
   {
     description:
       "Verser la préparation sur le fond de la pâte. Disposer les poires. Enfourner 50 mn à 180°",
+    order: 5,
+  },
+];
+
+export const stepsChocolatePearCrisps: StepType[] = [
+  {
+    description: "Préparer la pâte à crisps.",
+    ingredients: [
+      { ingredient: sugar, quantity: 100, unit: "g" },
+      { ingredient: butter, quantity: 100, unit: "g" },
+      { ingredient: flour, quantity: 150, unit: "g" },
+      { ingredient: chocolate, quantity: 50, unit: "g" },
+      { ingredient: egg, quantity: 1 },
+    ],
+    order: 1,
+  },
+  {
+    description: "Incorporer les morceaux de poire dans la pâte.",
+    ingredients: [{ ingredient: pear, quantity: 1 }],
+    order: 2,
+  },
+  {
+    description: "Former des cuillerées de pâte sur une plaque de cuisson.",
+    order: 3,
+  },
+  {
+    description: "Cuire au four.",
+    order: 4,
+  },
+  {
+    description: "Laisser refroidir avant de déguster.",
     order: 5,
   },
 ];

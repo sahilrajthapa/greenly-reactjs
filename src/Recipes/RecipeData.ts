@@ -17,6 +17,7 @@ import {
 } from "../Ingredients/IngredientData";
 
 import {
+  stepsChocolatePearCrisps,
   stepsFondantChocolat,
   stepsPavlova,
   stepsTarteAuxPoires,
@@ -98,11 +99,30 @@ const waldorfSalad: RecipeType = {
   tags: [appetizer, summer, vegan],
 };
 
+const chocolatePearCrisps: RecipeType = {
+  nom: "Chocolate Pear Crisps",
+  description: "Des crisps au chocolat et poire, croustillants et délicieux.",
+  imageURL:
+    "https://www.biggerbolderbaking.com/wp-content/uploads/2020/08/Pear-and-Chocolate-Crisp-WS-Thumbnail.jpg",
+  ingredients: [sugar, flour, chocolate, pear, butter],
+  etapes: stepsChocolatePearCrisps,
+  ingredientsWithQuantity: [
+    { ingredient: sugar, quantity: 100, unit: "g" },
+    { ingredient: butter, quantity: 100, unit: "g" },
+    { ingredient: flour, quantity: 150, unit: "g" },
+    { ingredient: chocolate, quantity: 50, unit: "g" },
+    { ingredient: pear, quantity: 1 },
+    { ingredient: egg, quantity: 1 },
+  ],
+  tags: [dessert, autumn],
+};
+
 export const allRecipes: ListOfRecipes = [
   pavlova,
   fondantChocolat,
   pearPie,
   waldorfSalad,
+  chocolatePearCrisps,
 ];
 
 export const summerRecipes = allRecipes.filter((recipe) => {

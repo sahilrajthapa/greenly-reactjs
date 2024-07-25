@@ -27,6 +27,8 @@ import {
   appetizer,
   autumn,
   dessert,
+  fruitBased,
+  glutenFree,
   summer,
   vegan,
   winter,
@@ -45,7 +47,7 @@ const pavlova: RecipeType = {
     { ingredient: redFruits, quantity: 100, unit: "g" },
     { ingredient: cream, quantity: 20, unit: "cl" },
   ],
-  tags: [summer, dessert],
+  tags: [summer, dessert, fruitBased, glutenFree],
 };
 
 const fondantChocolat: RecipeType = {
@@ -79,7 +81,7 @@ const pearPie: RecipeType = {
     { ingredient: sugar, quantity: 150, unit: "g" },
     { ingredient: egg, quantity: 2 },
   ],
-  tags: [dessert, autumn],
+  tags: [dessert, autumn, fruitBased],
 };
 
 const waldorfSalad: RecipeType = {
@@ -96,7 +98,7 @@ const waldorfSalad: RecipeType = {
     },
     { ingredient: feta, quantity: 150, unit: "g" },
   ],
-  tags: [appetizer, summer, vegan],
+  tags: [appetizer, summer, vegan, glutenFree],
 };
 
 const chocolatePearCrisps: RecipeType = {
@@ -114,7 +116,7 @@ const chocolatePearCrisps: RecipeType = {
     { ingredient: pear, quantity: 1 },
     { ingredient: egg, quantity: 1 },
   ],
-  tags: [dessert, autumn],
+  tags: [dessert, autumn, fruitBased],
 };
 
 export const allRecipes: ListOfRecipes = [
@@ -177,4 +179,14 @@ export const autumnRecipes: RecipeType[] = allRecipes.filter((recette) => {
 export const veganRecipes: RecipeType[] = allRecipes.filter((recette) => {
   const tagIds: string[] = recette.tags.map((tag) => tag.id);
   return tagIds.includes("vegan");
+});
+
+export const fruitBasedRecipes: RecipeType[] = allRecipes.filter((recette) => {
+  const tagIds: string[] = recette.tags.map((tag) => tag.id);
+  return tagIds.includes("fruitBased");
+});
+
+export const glutenFreeRecipes: RecipeType[] = allRecipes.filter((recette) => {
+  const tagIds: string[] = recette.tags.map((tag) => tag.id);
+  return tagIds.includes("glutenFree");
 });
